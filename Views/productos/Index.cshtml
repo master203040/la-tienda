@@ -1,0 +1,75 @@
+﻿@model IEnumerable<la_tienda.Models.productos>
+
+@{
+    ViewBag.Title = "Listado de Productos";
+}
+
+<h2>Lista de Productos</h2>
+
+<p>
+    @Html.ActionLink("Crear Producto ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.foto_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_prducto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.foto_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion_prducto)
+        </td>
+        <td>
+            <button class="boton1">@Html.ActionLink("Edit", "Edit", new { id = item.id_producto })</button>
+            <button class="boton2">@Html.ActionLink("Details", "Details", new { id = item.id_producto })</button>
+            <button class="boton3">
+                @Html.ActionLink("Delete", "Delete", new { id = item.id_producto })
+            </button>
+            
+            
+        </td>
+    </tr>
+}
+
+</table>
+<style>
+    .boton1 {
+        background-color:#62dcf2;
+        border-radius:4px;
+    }
+    .boton2 {
+        background-color: #00ffff;
+        border-radius: 4px;
+    }
+    .boton3 {
+        background-color: #f60a0a;
+        border-radius: 4px;
+    }
+</style>

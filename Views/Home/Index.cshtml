@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Supermarket</h1>
+    <p class="lead">Productos Frescos a Toda Hora..</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Productos","Index","productos")</h2>
+        <p>
+           Registra tus Productos Aqui!
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="https://cdn.pixabay.com/photo/2019/10/05/08/53/shop-4527402__340.jpg"alt="foto1" class="img"/>
+        <p>En nuestro supermercado ofresemos pos mejores prodcutos de la canasta familiar</p>
+    </div>
+    <div class="col-md-4">
+        <img src="https://cdn.pixabay.com/photo/2019/10/04/08/28/escalator-4525063__340.jpg" alt="foto2" class="img"/>
+        <p>las ofrertas para nuestros clientes son la mejores del mercados</p>
+    </div>
+</div>
+
+<style>
+
+    .jumbotron {
+        background-image: url("https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-in-a-row-picture-id1208790364?k=20&m=1208790364&s=612x612&w=0&h=EMmRWT5P5qbUvy95RxDtUSWrttlIsuXqjzRFhnTxqMQ= ");
+        background-size: cover;
+        color:#ffffff;
+    }
+    .img {
+        width:300px;
+        height:200px
+    }
+    p {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:16px;
+        font-weight:100;
+    }
+
+
+</style>

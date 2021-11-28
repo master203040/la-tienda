@@ -1,0 +1,69 @@
+﻿@model la_tienda.Models.productos
+
+@{
+    ViewBag.Title = "Borrar Producto";
+}
+
+<h2>Borrar Producto</h2>
+
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
+<div>
+    <h4>productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valor_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valor_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foto_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foto_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_prducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_prducto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" id="btn" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>
+<style>
+    #btn{
+        background-color: #f60a0a;
+    }
+</style>
